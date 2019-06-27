@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.PlayMusicActivity">
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/img1"/>
+    <gaomingyang.myapplication.View.PlayMusicView
+        android:id="@+id/play_music_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </gaomingyang.myapplication.View.PlayMusicView>
+
+    <ImageView
+        android:layout_width="@dimen/noBarBackSize"
+        android:layout_height="@dimen/noBarBackSize"
+        android:src="@mipmap/no_bar_back"
+        android:layout_margin="@dimen/marginSize"
+        android:onClick="onBackClick"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="70dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="音乐名称"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/titleSize"
+            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="作者"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/titleSize"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginSize"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

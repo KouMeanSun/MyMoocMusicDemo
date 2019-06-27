@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 修改statusbar的颜色 ，android:statusBarColo 的优先级大于.colorPrimaryDark。并且集成于colorPrimaryDark.两者都能够修改statusbar颜色 5.0以上才能够支持 -->
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="android:statusBarColor">@color/mainColor</item>
+
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <!--打开activity，新进入的activity所执行的动画-->
+        <item name="android:activityOpenEnterAnimation">@anim/open_enter</item>
+        <!--打开activity，原activity所执行的动画-->
+        <item name="android:activityOpenExitAnimation">@anim/open_exit</item>
+        <!--退出Activity时，所执行的动画-->
+        <item name="android:activityCloseExitAnimation">@anim/close_exit</item>
+        <!--退出Activity时，重新显示的Activity执行的动画-->
+        <item name="android:activityCloseEnterAnimation">@anim/close_enter</item>
+    </style>
+
+    <!--分割线样式-->
+    <style name="line">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/lineColor</item>
+        <item name="android:layout_margin">@dimen/marginSize</item>
+    </style>
+
+    <!--登录按钮-->
+    <style name="commitBtn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btnHeight</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/titleSize</item>
+        <item name="android:layout_marginLeft">@dimen/marginSize</item>
+        <item name="android:layout_marginRight">@dimen/marginSize</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/btn_commit_selector</item>
+    </style>
+
+</resources>
